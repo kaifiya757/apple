@@ -65,3 +65,60 @@ classifier=SVC(kernel='linear')
 classifier.fit(x_train,y_train)
 predictions=knn.predict(x_test)
 
+WORDCLOUD
+
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+text="""hi kaifiya 5th sem CSE departmebt"""
+WC=WordCloud().generate(text)
+plt.imshow(WC)
+plt.axis('off')
+plt.show()
+
+
+Text="""hi kaifiya 5th sem CSE departmebt."""
+import string
+print('list of punctuations=\n\n',string.punctuation)
+S=string.punctuation
+
+Text_Punct="".join(item for item in Text.split()if item not in S)
+print(Text)
+print()
+print('------text after removing punctuation---------------')
+print()
+print(Text_Punct)
+
+import nltk
+nltk.download('stopwords')
+
+Text="""hi kaifiya 5th sem CSE departmebt."""
+import nltk
+from nltk.corpus import stopwords
+stop_words=nltk.corpus.stopwords.words('english')
+print(stop_words)
+
+Text_stop="".join(item for item in Text.split()if item not in S)
+print(Text)
+print()
+print('------text after removing stopwords---------------')
+print()
+print(Text_Punct)
+
+import nltk
+nltk.download('punkt')
+
+Text="""you look smart,he look like star,you are looking awsome"""
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.stem import*
+tokens=word_tokenize(Text)
+print(tokens)
+
+Text="""you look smart,he look like star,you are looking awsome"""
+import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('punct')
+tokens=word_tokenize(Text)
+print(tokens)
